@@ -1,5 +1,7 @@
 # Crear un diccionario para almacenar los datos
 import sys
+import datetime #Para generar el codigo unico utilizando la fecha
+
 usuario = {}
 factura = {}
 paquete = {}
@@ -9,9 +11,8 @@ print("Bienvenido a Mensajeria Fidelitas")
 
 # Desicion para introducir datos
 while desicion==0:
-    print("Que desea realizar el dia de hoy?")
-    desicion=float(input("1. Ingresar nuevo usuario\n2. Ingresar datos de facturacion\n3. Agregar datos de un nuevo paquete\n4. Salir"))
-
+    print("Menú")
+    desicion=float(input("1. Ingresar nuevo usuario\n2. Ingresar datos de facturacion\n3. Agregar datos de un nuevo paquete\n4. Creación de guías\n5.Salir\nQue desea realizar el dia de hoy?: "))
 #Datos de Usuario
     while desicion==1:
         print ("Ingrese los datos del usuario")
@@ -94,8 +95,7 @@ while desicion==0:
             factura["telefono_destinatario"] = input("Ingrese el numero del destinatario: ")
             factura["cedula"] = input("Ingrese numero cedula: ")
             factura["peso_paquete"] = input("Ingrese el peso del paquete: ")
-            factura["pago_entrega"] = input("Cuanto debe pagar el cliente cuando recibe elpaquete: ")
-        
+            factura["pago_entrega"] = input("Cuanto debe pagar el cliente cuando recibe el paquete: ")
 
 # Mostrar los datos de la creacion de paquetes
         
@@ -118,7 +118,65 @@ while desicion==0:
                     sys.exit()
             if corr==2:
                 desicion=3
+
+# Solicitar Creación de guías
+    
     while desicion==4:
+        
+        paquete["numero_guia"] = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        paquete["nombre_comercio"] = input("Ingrese el nombre de su comercio: ")
+        paquete["telefono_comercio"] = input("Ingrese el teléfono de su comercio: ")
+        paquete["nombre_destinatario"] = input("Igrese el nombre del destinatario: ")
+        paquete["telefono_destinatario"] = input("Ingrese el numero del destinatario: ") 
+    
+
+# Verificacion de cobro
+
+        requiere_cobro = input("¿Se requiere cobro? (Sí/No): ").lower() == "si"
+        if requiere_cobro:
+            monto_a_cobrar = float(input("Monto a cobrar (si aplica): "))
+        else:
+            monto_a_cobrar = None
+        paquete["requiere_cobro"] = {"requiere": requiere_cobro, "monto": monto_a_cobrar}
+
+# Mostrar Información de la creación de guias
+
+        print("Guía del Paquete:")
+        print("Número de Guía:", paquete["numero_guia"])
+        print("Información del Comercio:")
+        print("Nombre: ",paquete["nombre_comercio"])
+        print("Número de Teléfono: ",paquete["telefono_comercio"])
+        print("Información del Destinatario:")
+        print("Nombre: ",paquete["nombre_destinatario"])
+        print("Número de Teléfono:",paquete["telefono_destinatario"])
+
+#Mostrar cobro
+        if paquete["requiere_cobro"]["requiere"]:
+            print("Monto a cobrar:", paquete["requiere_cobro"]["monto"])
+        else:
+            print("No se requiere cobro.")
+
+        corr=float(input("Estan los datos correctos?\n1.Si\n2.No"))
+        if corr==1:
+            print("Datos Guardados")
+            desicion=float(input("Desea realizar alguna otra gestion?\n1. Si\n2. Salir  "))
+            if desicion==1:
+                desicion=0
+            if desicion==2:
+                print("Gracias por preferirnos")
+                sys.exit()
+            if corr==2:
+                desicion=4
+
+
+
+
+
+
+
+
+            
+    while desicion==5:
         print("Gracias por preferirnos")
         sys.exit()
         
