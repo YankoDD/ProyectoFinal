@@ -1,0 +1,2 @@
+(('Numero de Guia:  ', 3388), 'Nombre del Comercio:   Papa', 'Telefono del Comercio:  89910429', 'Nombre del Destinatario:  Mamoi', 'Telefono del Dertinatario:  88937438', 4000.0, 'Estado:Entregado')
+(('Numero de Guia:  ', 7263), 'Nombre del Comercio:   Potatoe', 'Telefono del Comercio:  86953303', 'Nombre del Destinatario:  Tatii', 'Telefono del Dertinatario:  89910429', 1000.0, 'Estado:Entregado')

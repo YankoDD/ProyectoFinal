@@ -1,0 +1,2 @@
+(datetime.datetime(2023, 11, 26, 0, 19, 6, 147715), 'Nombre Destinario:  Juan', 'Telefono Destinario:  90', 'Cedula:  90', 'Peso del Paquete:  90', 'Pago de la Entrega:  90', 'Estado:Creado')
+(datetime.datetime(2023, 11, 26, 0, 50, 29, 831474), 'Nombre Destinario:  Tatii', 'Telefono Destinario:  89910429', 'Cedula:  702830163', 'Peso del Paquete:  20k', 'Pago de la Entrega:  1000', 'Estado:Creado')

@@ -1,0 +1,2 @@
+('Correo Usuario:   taticald20@gmail.com', 'Nombre Comercio:  Papa', 'Telefono Comercio:   89910429', 'Nombre Dueï¿½o:   Maydelen Calderon', 'Ubicacion Local:   Limon')
+('Correo Usuario:   zeldabmthlp@gmail.com', 'Nombre Comercio:  Potatoe', 'Telefono Comercio:   86953303', 'Nombre Dueño:   Yanko', 'Ubicacion Local:   Limon')
