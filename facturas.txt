@@ -1,2 +1,4 @@
 ('Tipo de Cedula:   702830163', 'Numero de Cedula:   ', 'Nombre del Usuario:    Maydelen Calderon', 'Numero de Telefono:   89910429', 'Correo Electronico:   taticald@gmail.com', 'Provincia:   Limon', 'Canton:   Limon', 'Distrito:  Limon')
 ('Tipo de Cedula:   Residente', 'Numero de Cedula:   702390895', 'Nombre del Usuario:    Yanko', 'Numero de Telefono:   86953303', 'Correo Electronico:   zeldabmthlp@gmail.com', 'Provincia:   Limon', 'Canton:   Limon', 'Distrito:  Limon')
+('Tipo de Cedula:  Residente', 'Numero de Cedula:  702390895', 'Nombre de Usuario:   KFC', 'Numero de Telefono:  27581091', 'Correo Electronico:  a@gmail.com', 'Provincia:  Limon', 'Canton:  Limon', 'Distrito:  Limon')
+('Tipo de Cedula:  Residente', 'Numero de Cedula:  701830163', 'Nombre de Usuario:   Subway', 'Numero de Telefono:  40529580', 'Correo Electronico:  b@gmail.com', 'Provincia:  Limon', 'Canton:  Limon', 'Distrito:  Limon')

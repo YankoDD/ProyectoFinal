@@ -1,2 +1,3 @@
-(('Numero de Guia:  ', 3388), 'Nombre del Comercio:   Papa', 'Telefono del Comercio:  89910429', 'Nombre del Destinatario:  Mamoi', 'Telefono del Dertinatario:  88937438', 4000.0, 'Estado:Entregado')
-(('Numero de Guia:  ', 7263), 'Nombre del Comercio:   Potatoe', 'Telefono del Comercio:  86953303', 'Nombre del Destinatario:  Tatii', 'Telefono del Dertinatario:  89910429', 1000.0, 'Estado:Entregado')
+(('Numero de Guia:  ', 4752), 'Nombre del Comercio:  KFC', 'Telefono del Comercio:   27581091', 'Nombre del Destinatario:  Germaine', 'Telefono del Destinatario:  64478746', 'Monto:  6700', 'Estado:  Recolectado')
+(('Numero de Guia:  ', 1862), 'Nombre del Comercio:  KFC', 'Telefono del Comercio:   27581091', 'Nombre del Destinatario:  Gabriel', 'Telefono del Destinatario:  64091819', 'Monto:  2000', 'Estado:  Recolectado')
+(('Numero de Guia:  ', 1731), 'Nombre del Comercio:  Subway', 'Telefono del Comercio:   27581091', 'Nombre del Destinatario:  Kriss', 'Telefono del Destinatario:  62502774', 'Monto:  2500', 'Estado:  Recolectado')

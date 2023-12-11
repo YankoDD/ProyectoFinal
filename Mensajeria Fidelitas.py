@@ -2,6 +2,7 @@
 import sys
 from datetime import datetime, timedelta #Para generar el codigo unico utilizando la fecha
 import random#Para el numero de guia
+import re
 usuario = []
 factura = []
 paquete = []
@@ -149,6 +150,77 @@ def estado_paquete():
                 lineas[i]=linea.replace(buscar,nuevo)
         with open(ruta,"w") as archivo:
             archivo.writelines(lineas)       
+def modulo_estadistico():
+    usuario=input("Escriba el nombre de la empresa:  ")
+    with open ("stats.txt","w") as jua:
+            jua.writelines("")
+    n=0
+    buscar=usuario
+    with open("paquetes.txt","r") as tex:
+        lineas=tex.readlines()
+    for i,linea in enumerate(lineas):
+        if buscar in linea:
+            n=n+1
+            with open ("stats.txt","a") as jua:
+                jua.writelines(linea+"\n")
+            with open ("stats.txt","r") as jua:
+                pato=jua.readlines()
+                print(pato)
+    nombre_archivo = 'stats.txt'
+    m=0
+    numero_linea = 0
+    posicion_argumento = 7  
+    with open(nombre_archivo, 'r') as archivo:
+        lineas = archivo.readlines()
+        while numero_linea < len(lineas):
+            palabras = lineas[numero_linea].split()
+            if 7 < len(palabras):
+    
+                print(palabras[posicion_argumento])
+                
+                for i,linea in enumerate(lineas):
+                    if palabras[posicion_argumento] in linea:
+                        m=m+1
+                potatoe="La cantidad de paquetes para el numero "+palabras[posicion_argumento]+"es de :  "+str(m)+"\n"
+            numero_linea=numero_linea+1
+            m=0
+    
+    s=0
+    numero_linea = 0
+    posicion_argumento = 11  
+    with open(nombre_archivo, 'r') as archivo:
+        lineas = archivo.readlines()
+        while numero_linea < len(lineas):
+            palabras = lineas[numero_linea].split()
+            if 11 < len(palabras):
+    
+                print(palabras[posicion_argumento])
+                
+                for i,linea in enumerate(lineas):
+                    if palabras[posicion_argumento] in linea:
+                        s=s+1
+                potatoe1="La cantidad de paquetes para la cedula "+palabras[posicion_argumento]+"es de :  "+str(s)+"\n"
+            numero_linea=numero_linea+1
+            s=0
+    
+    p=0
+    numero_linea = 0
+    posicion_argumento = 19  
+    with open(nombre_archivo, 'r') as archivo:
+        lineas = archivo.readlines()
+        while numero_linea < len(lineas):
+            palabras = lineas[numero_linea].split()
+            if 19 < len(palabras):
+                
+                for i,linea in enumerate(lineas):
+                    if palabras[posicion_argumento] in linea:
+                        numeros_solo = re.sub(r'\D', '', palabras[posicion_argumento])
+                        p=p+int(numeros_solo)
+                potatoe2=("La cantidad total de coste de envio es de:  "+str(p))
+            numero_linea=numero_linea+1
+            p=0
+    nos="Cantidad de Paquetes Enviados:  "+str(n)
+    print(nos,potatoe,potatoe1,potatoe2)                   
 hora_actual=datetime.now()           
 print("Bienvenido a Mensajeria Fidelitas")
 
@@ -156,7 +228,7 @@ print("Bienvenido a Mensajeria Fidelitas")
 while desicion==0:
     
     print("Menú")
-    desicion=int(input("1. Ingresar nuevo usuario\n2. Ingresar datos de facturacion\n3. Agregar datos de un nuevo paquete\n4. Creación de guías\n5.Cambiar el estado de un paquete\n6.Rastreo de Paquete\n7.Salir\nQue desea realizar el dia de hoy?: "))
+    desicion=int(input("1. Ingresar nuevo usuario\n2. Ingresar datos de facturacion\n3. Agregar datos de un nuevo paquete\n4. Creación de guías\n5.Cambiar el estado de un paquete\n6.Rastreo de Paquete\n7. Medidor de Estadisticas\n8.Salir\nQue desea realizar el dia de hoy?: "))
 
 #Datos de Usuario
     while desicion==1:
@@ -220,7 +292,7 @@ while desicion==0:
     
 
 
-    
+#Creacion de Guias    
     while desicion==4:
         creacion_guias()
         dato1=(str(guias))
@@ -237,19 +309,26 @@ while desicion==0:
                 sys.exit()
         if corr==2:
             desicion=4
-
+#Actualizar estado de Paquetes
     while desicion==5:
         
         estado_paquete()
         desicion=0
-    
+#Rastrear paquete
     while desicion==6:
         rastreo_paquete()
         desicion=0
-       
-        
-            
+#Ver stats      
     while desicion==7:
+        modulo_estadistico()    
+        desicion=int(input("Desea realizar alguna otra gestion?\n1. Si\n2. Salir  "))
+        if desicion==1:
+            desicion=0
+        if desicion==2:
+            print("Gracias por preferirnos")
+            sys.exit()  
+#Salir  
+    while desicion==8:
         print("Gracias por preferirnos")
         sys.exit()
         

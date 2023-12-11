@@ -1,2 +1,2 @@
-('Correo Usuario:   taticald20@gmail.com', 'Nombre Comercio:  Papa', 'Telefono Comercio:   89910429', 'Nombre Dueï¿½o:   Maydelen Calderon', 'Ubicacion Local:   Limon')
-('Correo Usuario:   zeldabmthlp@gmail.com', 'Nombre Comercio:  Potatoe', 'Telefono Comercio:   86953303', 'Nombre Dueño:   Yanko', 'Ubicacion Local:   Limon')
+('Correo electronico:  a@gmail.com', 'Nombre del Comercio:  KFC', 'Telefono del Comercio:   27581091', 'Nombre del Dueño:  Cheff', 'Ubicacion del Local:  Limon')
+('Correo electronico:  b@gmail.com', 'Nombre del Comercio:  Subway', 'Telefono del Comercio:   40529580', 'Nombre del Dueño:  Sandwich', 'Ubicacion del Local:  Limon')
